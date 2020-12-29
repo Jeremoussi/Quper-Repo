@@ -1,0 +1,41 @@
+{% extends 'entities/entity_base.html' %}
+
+{% block content%}
+
+  <div class="jumbotron">
+    <h1>Welkom bij Travako!</h1>
+    <h2>Vind de vakman bij jou in de buurt</h2>
+    <br>
+    <h4>Hieronder kan u een overzicht terugvinden van de lokale vakmannen en handelszaken.</h4>
+    <br>
+  </div>
+
+  <!-- {% for entity in entity_list %}
+     <div class="row">
+      <div class="col">
+
+        <h4>Naam: <a href="{% url 'entity_detail' pk=entity.pk %}">{{ entity.entityName }}</a></h4>
+        <h5>Beroep: {{ entity.activity }}</h5>
+        <br>
+      </div>
+    </div>
+
+    {% endfor %} -->
+
+    <div class="row">
+
+
+      {% for entity in entity_list %}
+        <div class="col-4">
+
+
+          <h4>Naam: <a href="{% url 'entity_detail' pk=entity.pk %}">{{ entity.entityName }}</a></h4>
+
+        </div>
+      {% endfor %}
+    </div>
+
+
+
+
+{% endblock%}

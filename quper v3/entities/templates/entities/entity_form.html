@@ -1,0 +1,17 @@
+{% extends 'entities/entity_base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content%}
+  <h1>New Entity</h1>
+  <form method="post" class="entity-form form-group">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-secondary btn-lg">Save</button>
+    {% endbuttons %}
+  </form>
+
+
+
+{% endblock%}
